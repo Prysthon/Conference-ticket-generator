@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /**
    * Exibe a imagem carregada na upload-box e mostra os botões de ação.
-   * @param {string} imageSrc - Fonte da imagem (DataURL) a ser exibida.
    */
   function displayImage(imageSrc) {
     uploadBox.innerHTML = `
@@ -103,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /**
    * Exibe uma mensagem de erro na info-container.
-   * @param {string} message - Mensagem de erro a ser exibida.
    */
   function showError(message) {
     infoContainer.style.display = "flex";
@@ -115,7 +113,6 @@ document.addEventListener("DOMContentLoaded", function () {
   /**
    * Valida os campos do formulário e exibe mensagens de erro, se necessário.
    * Se todos os campos forem válidos, os dados são armazenados e o usuário é redirecionado.
-   * @param {Event} event - Evento de submissão do formulário.
    */
   function validateForm(event) {
     event.preventDefault();
@@ -170,8 +167,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /**
    * Exibe uma mensagem de erro para um campo específico do formulário.
-   * @param {HTMLElement} inputOrBox - Elemento de input ou caixa de upload.
-   * @param {string} message - Mensagem de erro a ser exibida.
    */
   function showFieldError(inputOrBox, message) {
     const errorDiv = document.createElement("div");
@@ -197,8 +192,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /**
    * Valida o formato do email utilizando expressão regular.
-   * @param {string} email - Email a ser validado.
-   * @returns {boolean} - Retorna true se o email for válido, senão false.
    */
   function validateEmail(email) {
     const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
